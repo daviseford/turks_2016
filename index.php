@@ -39,14 +39,39 @@
 
     <style>
         .item {
-            width: 200px;
+            width: 20%;
             float: left;
             margin-bottom: 6px;
+        }
+
+        .item--width2 {
+            width: 40%;
+        }
+
+        .item-sizer {
+            width: 20%;
         }
 
         .item img {
             display: block;
             width: 100%;
+        }
+
+        /* Extra Small Devices, Phones */
+        @media only screen and (max-width: 480px) {
+            .item-sizer {
+                width: 45%;
+            }
+
+            .item {
+                width: 45%;
+                float: left;
+                margin-bottom: 6px;
+            }
+
+            .item--width2 {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -63,10 +88,17 @@
 
 
             <div class="grid">
+                <div class="item-sizer"></div>
                 <?php
                 $photoCount = 60;
                 for ($i = 1; $i < $photoCount; $i++) {
-                    echo '<div class="item"> <a href="img/day1/Photo-' . $i . '.jpg" target="_blank"> <img src="img/day1/thumb/Photo-' . $i . '.jpg"/> </a> </div> ';
+                    $randomInt = rand(0, 15);
+                    if ($randomInt <= 1 && $i < 54 && $i > 4) { //small chance of increasing scale. don't do it for the last 6-10 pics, so it ends cleanly
+                        $class = 'item item--width2';
+                    } else {
+                        $class = 'item';
+                    }
+                    echo '<div class="' . $class . '"> <a href="img/day1/Photo-' . $i . '.jpg" target="_blank"> <img src="img/day1/thumb/Photo-' . $i . '.jpg"/> </a> </div> ';
                 }
                 ?>
             </div>
@@ -79,7 +111,12 @@
             <a href="http://daviseford.com/turks_2016/img/day1/day1.zip" class="btn btn-lg btn-primary"
                onClick="ga('send', 'event', { eventCategory: 'download_button', eventAction: 'day1_download', eventLabel: 'clicked'});"><span
                     class="glyphicon glyphicon-cloud-download"></span> Download Day1 (577mb)</a>
-
+            <br/>
+            <p class="text-center">
+                <small>I've set this gallery up with a small amount of randomness. Some pictures will randomly be
+                    larger. It's not personal, trust me. There's a 1/15 chance of a photo being scaled up.
+                </small>
+            </p>
         </div>
         <div class="col-md-3"></div>
     </div>
@@ -92,8 +129,9 @@
             // init Masonry after all images have loaded
             $grid.masonry({
                 itemSelector: '.item',
-                columnWidth: 200,
-                gutter: 6
+                columnWidth: '.item-sizer',
+                gutter: 3,
+                percentPosition: true
             });
         });
 
