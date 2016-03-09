@@ -9,7 +9,7 @@
     <title>Turks and Caicos - Williams Family 2016</title>
 
     <meta property="og:title" content="Turks and Caicos 2016">
-    <meta property="og:image" content="http://daviseford.com/turks_2016/img/day1/thumb/image001.jpg"/>
+    <meta property="og:image" content="http://daviseford.com/turks_2016/img/day2/thumb/Photo-74.jpg"/>
     <meta property="og:site_name" content="daviseford.com">
     <meta property="og:url" content="http://daviseford.com/turks_2016/index.php">
     <meta property="og:description"
@@ -17,8 +17,7 @@
     <meta property="og:type" content="website">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+    <link rel="stylesheet" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,14 +27,14 @@
     <![endif]-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
     <!-- Images Loaded and Masonry -->
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
+    <script src="//npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
 
     <style>
         .item {
@@ -93,7 +92,7 @@
                 $photoCount = 60;
                 for ($i = 1; $i < $photoCount; $i++) {
                     $randomInt = rand(0, 15);
-                    if ($randomInt <= 1 && $i < 54 && $i > 4) { //small chance of increasing scale. don't do it for the last 6-10 pics, so it ends cleanly
+                    if ($randomInt <= 3 && $i < 54 && $i > 4) { //small chance of increasing scale. don't do it for the last 6-10 pics, so it ends cleanly
                         $class = 'item item--width2';
                     } else {
                         $class = 'item';
@@ -105,12 +104,67 @@
         </div>
     </div>
     <div class="row clearfix"></div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Day 2</h1>
+        </div>
+
+        <div class="col-md-12">
+
+
+            <div class="grid">
+                <div class="item-sizer"></div>
+                <?php
+                $photoCount = 135;
+                for ($i = 1; $i < $photoCount; $i++) {
+                    $randomInt = rand(0, 15);
+                    if ($randomInt <= 3 && $i < 130 && $i > 4) { //small chance of increasing scale. don't do it for the last 6-10 pics, so it ends cleanly
+                        $class = 'item item--width2';
+                    } else {
+                        $class = 'item';
+                    }
+                    echo '<div class="' . $class . '"> <a href="img/day2/Photo-' . $i . '.jpg" target="_blank"> <img src="img/day2/thumb/Photo-' . $i . '.jpg"/> </a> </div> ';
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Day 3</h1>
+        </div>
+
+        <div class="col-md-12">
+
+
+            <div class="grid">
+                <div class="item-sizer"></div>
+                <?php
+                $photoCount = 96;
+                for ($i = 1; $i < $photoCount; $i++) {
+                    $randomInt = rand(0, 15);
+                    if ($randomInt <= 3 && $i < 91 && $i > 4) { //small chance of increasing scale. don't do it for the last 6-10 pics, so it ends cleanly
+                        $class = 'item item--width2';
+                    } else {
+                        $class = 'item';
+                    }
+                    echo '<div class="' . $class . '"> <a href="img/day3/Photo-' . $i . '.jpg" target="_blank"> <img src="img/day3/thumb/Photo-' . $i . '.jpg"/> </a> </div> ';
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 text-center">
-            <a href="http://daviseford.com/turks_2016/img/day1/day1.zip" class="btn btn-lg btn-primary"
-               onClick="ga('send', 'event', { eventCategory: 'download_button', eventAction: 'day1_download', eventLabel: 'clicked'});"><span
-                    class="glyphicon glyphicon-cloud-download"></span> Download Day1 (577mb)</a>
+            <a href="http://daviseford.com/turks_2016/img/day1-3.zip" class="btn btn-lg btn-primary"
+               onClick="ga('send', 'event', { eventCategory: 'download_button', eventAction: 'day123_download', eventLabel: 'clicked'});"><span
+                    class="glyphicon glyphicon-cloud-download"></span> Download Day1-3 (1.8GB)</a>
             <br/>
             <p class="text-center">
                 <small>I've set this gallery up with a small amount of randomness. Some pictures will randomly be
