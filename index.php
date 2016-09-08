@@ -33,7 +33,7 @@
 
 
     <!-- Images Loaded and Masonry -->
-    <script src="//npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    <script src="//unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
 
     <style>
